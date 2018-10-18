@@ -1,0 +1,16 @@
+<launch>
+<!--param参数设置-->
+<param name="param1" value="1"/>
+<param name="param2" value="2"/>
+
+<!-- rosparam参数设置-->
+<rosparam>
+ param3: 3
+ param4: 4
+ param5: 5
+</rosparam>
+ <!--以上写法将参数转成YAML文件加载，注意param前面必须为空格，不能用Tab，否则YAML解析错误-->
+    <!--rosparam file="$(find robot_sim_demo)/config/xbot2_control.yaml" command="load" /-->
+<node pkg="param1" type="param1" name="param1" output="screen"/>
+</launch>
+
